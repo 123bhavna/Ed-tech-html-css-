@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    /* Add your custom colors and fonts as necessary */
+:root {
+  --background: #f0f0f0;
+  --foreground: #333;
+  --card-bg: #fff;
+  --primary: #007bff;
+  --primary-foreground: #fff;
+  --muted-foreground: #666;
+  --ring: #0056b3;
+}
+
+body.bg-background {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.md\:px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.lg\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: var(--card-bg);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+.card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  margin-bottom: 1rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.content p {
+  color: var(--muted-foreground);
+}
+
+.button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.25rem;
+      padding: 0 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--primary-foreground);
+      background-color: var(--primary);
+      border-radius: 0.375rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+      margin-top: auto;
+    }
+
+.button:hover {
+  background-color: var(--primary-foreground) / 90;
+}
+
+.button:focus-visible {
+  outline: none;
+  ring: 1px solid var(--ring);
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+  </style>
+</head>
+ <!-- Navbar Start -->
+ <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Ed-Tech</h2>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                <div class="dropdown-menu fade-down m-0">
+                    <a href="team.html" class="dropdown-item">Fundamentals</a>
+                    <a href="technical_modules.html" class="dropdown-item">Technicals</a>
+                    <!-- <a href="404.html" class="dropdown-item"> Page</a> -->
+                </div>
+            </div>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="courses.html" class="nav-item nav-link">Blogs</a>
+           
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i class="fa fa-arrow-right ms-3"></i></a>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+<!-- modules start -->
+<body class="bg-background text-foreground">
+   
+  <main class="container mx-auto py-12 px-4 md:px-6 lg:px-8">
+    <h1 style="font-size: 4em;">
+        Modules
+    </h1>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="card">
+        <div class="content">
+          <a href="1.html"><h3>1. what are Candlesticks:</h3></a>
+          <p>Candlesticks are visual representations of price movements in financial charts, widely used in technical analysis. Each candlestick conveys information about the opening, closing, high, and low prices during a specific time period, helping traders analyze market sentiment and potential trends. </p>
+        </div>
+        <a href="1.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>2. What is a Doji Candlestick: </h3>
+          <p>A Doji is a candlestick pattern formed in financial charts when the opening and closing prices are very close or nearly identical, resulting in a small or nonexistent body. Visually, it resembles a cross or plus sign, indicating market indecision and potential trend reversal. Dojis are essential in technical analysis, providing insights into shifts in market sentiment. </p>
+        </div>
+        <a href="2.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>3. What is a Marubozu Candlestick: </h3>
+          <p>A Marubozu is a Japanese candlestick pattern characterized by a candle with little to no wicks or shadows, representing a strong and decisive price movement during a trading period. The absence of upper and lower wicks signifies that either buyers (bulls) or sellers (bears) dominated the entire session. </p>
+        </div>
+        <a href="3.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>4. Spinning Tops: </h3>
+          <p> Spinning tops are candlesticks with small bodies and both upper and lower wicks of roughly equal length. They suggest indecision in the market, with neither buyers nor sellers dominating the trading session.   </p>
+        </div>
+        <a href="4.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>5. What is a Dual Candlestick: </h3>
+          <p>Dual candlestick patterns involve two consecutive candlesticks that, when analyzed together, provide insights into potential market reversals or continuations. Traders use these patterns for technical analysis to make informed decisions about future price movements. </p>
+        </div>
+        <a href="5.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>6. What is reversal </h3>
+          <p>Reversal in trading signifies a shift in the prevailing trend direction.  
+
+            Bullish reversals indicate a change from a downtrend to an uptrend, while bearish reversals suggest a transition from an uptrend to a downtrend. </p>
+        </div>
+        <a href="6.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>7. What is Tweezer Pattern  </h3>
+          <p>Tweezer Pattern involves two consecutive candlesticks with almost identical highs or lows, signaling potential trend reversals.  </p>
+        </div>
+        <a href="7.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>8. Three candlestick pattern   </h3>
+          <p>Trio of Signals,  Complex Signals,  Versatile Applications. </p>
+        </div>
+        <a href="8.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>9. Abandoned Baby pattern  </h3>
+          <p>The Abandoned Baby Pattern is a potent reversal signal, featuring a gap and a Doji between consecutive candlesticks.  </p>
+        </div>
+        <a href="9.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>10. Three White Soldiers   </h3>
+          <p>Three White Soldiers is a formidable bullish candlestick pattern.  
+
+            This trio manifests as three consecutive rising candles, symbolizing a compelling shift in market dynamics.   </p>
+        </div>
+        <a href="10.html" class="button">Learn More</a>
+      </div>
+     
+      <div class="card">
+        <div class="content">
+          <h3>11. Anatomy of a Three Black Crows Pattern </h3>
+          <p>The Three Black Crows pattern is characterized by three consecutive bearish candlesticks that unfold in the following manner. </p>
+        </div>
+        <a href="11.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>12. Tweezer Pattern </h3>
+          <p>Tweezer Pattern involves two consecutive candlesticks with almost identical highs or lows, signaling potential trend reversals.   </p>
+        </div>
+        <a href="12.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>13. Definition of Support </h3>
+          <p>Support in trading is like a safety net for prices. It's a specific level at which an asset finds enough buying interest to prevent it from falling further. Think of it as a financial guardian angel that keeps the market from going into a free fall.  </p>
+        </div>
+        <a href="13.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>14. Historical, Dynamic, and Psychological Support in Trading:  </h3>
+          <p>While the concept of support and resistance remains the same, their manifestations in trading can take on different forms based on timeframe and underlying factors. Here's a breakdown of historical, dynamic, and psychological support:  </p>
+        </div>
+        <a href="14.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>15. Understanding Resistance in Financial Markets  </h3>
+          <p> Resistance is like a financial ceiling. It's a specific price level at which an asset encounters selling interest, creating a barrier that often prevents the price from rising further. Picture it as a force that tries to hold back the upward momentum of a stock or any traded asset.  </p>
+        </div>
+        <a href="15.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>16. Types of Resistance </h3>
+          <p>Understanding the types of resistance in the forex market is crucial for traders. Here's a brief overview of different types of resistance that are relevant in the context of foreign exchange (forex) trading: </p>
+        </div>
+        <a href="16.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>17. Support and Resistance  </h3>
+          <p>Support acts like a safety net, preventing prices from falling too low. Resistance, on the other hand, is a barrier that limits upward movements.  </p>
+        </div>
+        <a href="17.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>18. Recognizing and Analyzing Chart Patterns  </h3>
+          <p> Chart patterns are visual representations of price movements that traders use to identify potential trends, reversals, and continuation signals in financial markets. Recognizing and analyzing these patterns is crucial for making informed trading decisions. </p>
+        </div>
+        <a href="18.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>19.  Types of Continuation Patterns </h3>
+          <p> Continuation patterns are essential in technical analysis as they suggest that an existing trend is likely to continue rather than reverse.  </p>
+        </div>
+        <a href="19.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>20. Why Study Continuation Patterns:  </h3>
+          <p>Continuation patterns are a crucial aspect of technical analysis that traders and investors study to gain insights into the future direction of price movements. These patterns indicate a temporary consolidation in the market before the existing trend resumes.  </p>
+        </div>
+        <a href="20.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>21. Reversal Patterns, Types of Reversal Patterns  </h3>
+          <p>Reversal patterns are crucial in technical analysis as they signify potential changes in the prevailing trend. These patterns suggest a shift in market sentiment, indicating the end of an existing trend and the possible start of a new one.  </p>
+        </div>
+        <a href="21.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>22. Long-Term Investing: Reaping Rewards Over Time   </h3>
+          <p> Long-term investing is like planting a seed and watching it grow into a mighty tree. It requires patience and a focus on the big picture. </p>
+        </div>
+        <a href="22.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>23.  Triple Bottom Pattern:   </h3>
+          <p>The triple bottom pattern is a bullish reversal pattern that typically forms after a downtrend.  </p>
+        </div>
+        <a href="23.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>24. Combining Reversal Patterns with Fundamental Analysis: Synergy for Informed Trading  </h3>
+          <p>Combining reversal patterns with fundamental analysis is a powerful strategy, merging the insights from technical charts with the underlying financial health of an asset. Here's how you can synergize these two approaches for more informed trading decisions:  </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>25. What would you do when you identify a Head and Shoulders pattern? </h3>
+          <p>O Expect a bullish trend 
+
+            O Expect a bearish trend 
+            
+            O Close existing positions  </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>26. How is the 'Candlestick' pattern different from a regular bar chart in technical analysis?  </h3>
+          <p>O Candlesticks only represent bearish trends 
+
+            O Candlesticks provide more visual information 
+            
+            O Candlesticks are not suitable for trend analysis   </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>27. What would you do when analyzing a Double Top pattern on a forex chart?  </h3>
+          <p>O Expect a trend continuation 
+
+            O Anticipate a trend reversal 
+            
+            O Ignore the pattern </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>28. How would you approach a situation where the price breaches a crucial support level?  </h3>
+          <p> O Opt for selling 
+
+            O Initiate aggressive buying 
+            
+            O Maintain existing positions  </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>29. What would you do when analyzing a Rising Wedge pattern?  </h3>
+          <p>O Expect a bullish breakout 
+
+            O Anticipate a bearish breakout 
+            
+            O Close existing positions  </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>30. When you spot a Bullish Harami pattern on a forex chart, what is your strategic move?  </h3>
+          <p>
+            O Regard it as a continuation pattern 
+
+            O Anticipate a bullish reversal 
+            
+            O View it as a bearish reversal signal  </p>
+        </div>
+        <a href="#" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>31. Introduction to Moving Averages  </h3>
+          <p>
+            Moving Averages (MAs) are statistical calculations used to analyze data points over a specified period, smoothing out fluctuations and revealing trends.</p>
+        </div>
+        <a href="31.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>32. What Are Moving Averages Used for?  </h3>
+          <p>
+            Trend Identification ,  Signal Generation ,  Support and Resistance , Volatility Measurement </p>
+        </div>
+        <a href="32.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>33. MACD (Moving Average Convergence Divergence):  </h3>
+          <p>
+            The Moving Average Convergence Divergence (MACD) is a popular momentum indicator used in technical analysis to analyze trends and generate potential buy or sell signals. It consists of two main components: the MACD line and the Signal line.  </p>
+        </div>
+        <a href="33.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>34.  What is Moving Average Crossovers  </h3>
+          <p>
+            Moving Average Crossovers are technical analysis tools used to identify potential shifts in market trends. They occur when two different moving averages intersect, typically involving a short-term average (e.g., 50-day) and a long-term average (e.g., 200-day). </p>
+        </div>
+        <a href="34.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>35. What is Volume Analysis?  </h3>
+          <p>
+            Volume analysis is a method used in financial markets to evaluate the number of shares or contracts traded during a specific time period. It provides insights into the strength and sustainability of price movements. </p>
+        </div>
+        <a href="35.html" class="button">Learn More</a>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h3>36.  Introduction to Volume Bars:  </h3>
+          <p>
+            Volume bars are graphical representations of trading volume in stock charts, providing a visual depiction of the intensity of market activity during specific time periods.  </p>
+        </div>
+        <a href="36.html" class="button">Learn More</a>
+      </div>
+     
+     
+    </div>
+  </main>
+</body>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Ed-Tech</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                         <a class="border-bottom" href="https://htmlcodex.com"></a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <!-- <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</html>
